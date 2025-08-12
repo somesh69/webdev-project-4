@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced 3-Tab Web App</title>
+  <link rel="stylesheet" href="task4.css" />
+</head>
+<body>
+  <header>
+    <h1>🌐 My Interactive App</h1>
+    <nav>
+      <button class="tab-btn active" data-tab="portfolio">Portfolio</button>
+      <button class="tab-btn" data-tab="todo">To-Do List</button>
+      <button class="tab-btn" data-tab="products">Products</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portfolio Tab -->
+    <section id="portfolio" class="tab-content active">
+      <div class="profile">
+        <img src="photo1.jpg" alt="Profile">
+        <h2>Somesh pratap singh</h2>
+        <p>Web Developer | Designer | Creator</p>
+      </div>
+
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="skill"><span>HTML</span><div class="bar" data-skill="90"></div></div>
+        <div class="skill"><span>CSS</span><div class="bar" data-skill="85"></div></div>
+        <div class="skill"><span>JavaScript</span><div class="bar" data-skill="80"></div></div>
+      </div>
+
+      <div class="projects">
+        <h3>Projects</h3>
+        <div class="project-card">
+          <h4>Weather App</h4>
+          <p>Real-time weather updates with API.</p>
+        </div>
+        <div class="project-card">
+          <h4>Quiz Game</h4>
+          <p>Interactive quiz with timer and scoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- To-Do List Tab -->
+    <section id="todo" class="tab-content">
+      <div class="todo-container">
+        <h2>📝 To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Add a new task..." />
+        <button id="add-task">Add</button>
+        <div class="filters">
+          <button data-filter="all" class="filter-btn active">All</button>
+          <button data-filter="active" class="filter-btn">Active</button>
+          <button data-filter="completed" class="filter-btn">Completed</button>
+        </div>
+        <ul id="todo-list"></ul>
+      </div>
+    </section>
+
+    <!-- Products Tab -->
+    <section id="products" class="tab-content">
+      <h2>🛒 Products</h2>
+      <input type="text" id="search" placeholder="Search products...">
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+      </select>
+      <select id="sort-price">
+        <option value="default">Sort by Price</option>
+        <option value="low-high">Low to High</option>
+        <option value="high-low">High to Low</option>
+      </select>
+      <div id="product-list" class="products-grid"></div>
+    </section>
+  </main>
+
+  <script src="task4.js"></script>
+</body>
+</html>

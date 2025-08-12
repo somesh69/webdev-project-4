@@ -1,0 +1,152 @@
+/* Glassmorphism base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1f36, #3a2f57);
+  color: #fff;
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+nav {
+  margin-top: 10px;
+}
+.tab-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: rgba(255,255,255,0.3);
+}
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Portfolio */
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 150px;  /* change to desired width */
+  height: 150px; /* change to desired height */
+  object-fit: cover; /* keeps it proportional and crops if needed */
+  border-radius: 50%; /* keeps it circular */
+}
+.skills .skill {
+  margin: 10px 0;
+}
+.bar {
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background: #00ff88;
+  width: 0;
+  transition: width 1s ease;
+}
+.project-card {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* To-Do List */
+.todo-container {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 12px;
+}
+#todo-input {
+  width: 70%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+#add-task {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #00ff88;
+  cursor: pointer;
+}
+.filters {
+  margin: 10px 0;
+}
+.filter-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  margin: 3px;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+.filter-btn.active {
+  background: #00ff88;
+  color: #000;
+}
+#todo-list li {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#todo-list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.product-card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.product-card h4 {
+  margin-bottom: 5px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
