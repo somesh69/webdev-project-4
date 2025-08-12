@@ -1,4 +1,4 @@
-TASK-4-WEB-DEVELOPMENT
+]TASK-4-WEB-DEVELOPMENT
 Portfolio | To-Do List | Products Section
 
 HTML | CSS | JavaScript
@@ -71,4 +71,5 @@ cd TASK-4-WEB-DEVELOPMENT
 # Run the project
 Open index.html in your browser
 
-💡 Made with ❤ by Somesh Pratap Singh • LinkedIn https://www.linkedin.com/in/somesh-pratap-singh-762391315/
+💡 Made with ❤ by Somesh Pratap Singh • [(LinkedIn)](https://www.linkedin.com/in/somesh-pratap-singh-762391315/)
+
